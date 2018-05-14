@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" ng-app="portfolioApp">
+    <head>
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.min.js"></script>
+        <script src="public/js/app.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+        <link rel=“stylesheet” href=“https://use.fontawesome.com/releases/v5.0.13/css/all.css” integrity=“sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp” crossorigin=“anonymous”>
+        <link rel="stylesheet" href="public/css/style.css">
+        <title>Brian Murphy's Portfolio</title>
+    </head>
+    <body ng-controller="mainController as ctrl">
+        <header>
+            <nav class="navbar is-info">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="#"><h1>Brian Murphy's Portfolio</h1></a>
+                </div>
+
+                <div class="navbar-start">
+                    <div class="navbar-item">
+                        <a ng-click="ctrl.showHome()" href="#">Home</a>
+                    </div>
+                    <div class="navbar-item">
+                        <a ng-click="ctrl.showAbout()" href="#">About</a>
+                    </div>
+                    <div class="navbar-item">
+                        <a ng-click="ctrl.showResume()" href="#">Resume</a>
+                    </div>
+                    <div class="navbar-item">
+                        <a ng-click="ctrl.showProjects()" href="#">Projects</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <h1>About</h1>
+            <p>Hi, my name is Brian Murphy. I am a junior web developer. I have recently transitioned my career from sales due to my increasing interest in the tech sector.  My years of sales experience taught me value lessons on how to be a professional and work within different sized companies. Mostly importantly, I learned what I wanted out of a rewarding career and that is what prompted me to jump head first into the tech world and learn as much as I can. </p>
+
+            <h1>Apps</h1>
+            <ul>
+                <li><a href="https://bm-marveluniverse.herokuapp.com/" target="_blank">Marvel Website</a></li>
+                <li><a href="https://timepiece-app.herokuapp.com/"target="_blank">Timepiece Tracker</a></li>
+            </ul>
+
+            <h1>Links</h1>
+                <ul>
+                    <li><a href="https://github.com/BrianMurphy89" target="_blank">Github</a></li>
+                    <li><a href="https://www.linkedin.com/in/brianmurphy89/">LinkedIn</a></li>
+                </ul>
+
+            <h1>Resume</h1>
+                <a href="https://docs.google.com/document/d/1Hyq89XeI0ZpGzhp23wE_ENIG5LTGNsXVLo9WZ74HFRo/edit?usp=sharing">My Resume</a>
+        </main>
+
+        <div ng-if="ctrl.currentPage === 'home'" ng-include="'public/views/partials/home.html'"></div>
+        <div ng-if="ctrl.currentPage === 'about'" ng-include="'public/views/partials/about.html'"></div>
+        <div ng-if="ctrl.currentPage === 'resume'" ng-include="'public/views/partials/resume.html'"></div>
+        <div ng-if="ctrl.currentPage === 'projects'" ng-include="'public/views/partials/projects.html'"></div>
+    </body>
+</html>
