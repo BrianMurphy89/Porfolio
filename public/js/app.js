@@ -15,8 +15,4 @@ app.controller('mainController', ['$http', function($http){
     this.showProjects = () => {
         this.currentPage = 'projects'
     }
-
-    this.showResume = () => {
-        this.currentPage = 'resume'
-    }
 }])

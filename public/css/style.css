@@ -1,0 +1,82 @@
+#navtext {
+    color: ghostwhite;
+}
+
+.picture-container {
+    display: inline;
+}
+
+#picture {
+    max-height: 150px;
+    display: flex;
+    object-fit: contain;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border-radius: 50%;
+}
+
+#headline {
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 30px;
+    color: ghostwhite;
+}
+
+footer {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding-top: 5px;
+    bottom: 0;
+    position: fixed;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+}
+
+.logos {
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.about-container {
+    text-align: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2%;
+}
+
+main {
+    background-color: grey;
+}
+
+html {
+    background-size: cover;
+    background-color: grey;
+}
+
+p {
+    color: ghostwhite;
+}
+
+.contact-info {
+    max-width: 100px;
+    max-height: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#tile-boxes {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+body {
+    min-height: 400px;
+    margin-bottom: 100px;
+    clear: both;
+}
